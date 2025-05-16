@@ -1,0 +1,243 @@
+<html class="scroll-smooth" lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Info Kamar Tanpa AC
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+   /* Animasi fade-in untuk section */
+   .fade-in {
+     opacity: 0;
+     transform: translateY(20px);
+     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+   }
+   .fade-in.visible {
+     opacity: 1;
+     transform: translateY(0);
+   }
+   /* Animasi highlight link */
+   nav a.active {
+     text-decoration: underline;
+     font-weight: 700;
+     color: #1D4ED8; /* Tailwind blue-700 */
+   }
+   /* Tombol kembali kiri bawah fixed */
+   #back-button {
+     position: fixed;
+     bottom: 1.5rem;
+     left: 1.5rem;
+     z-index: 60;
+   }
+  </style>
+ </head>
+ <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+  <header class="bg-blue-600 text-white shadow-md sticky top-0 z-50">
+   <div class="container mx-auto px-4 py-5 flex items-center justify-between">
+    <h1 class="text-2xl font-semibold">
+     Info Kamar Tanpa AC
+    </h1>
+    <nav class="space-x-6 hidden md:flex text-sm font-medium" id="desktop-nav">
+     <a class="hover:underline cursor-pointer" href="#foto-kamar">
+      Foto Kamar
+     </a>
+     <a class="hover:underline cursor-pointer" href="#foto-kamar-mandi">
+      Foto Kamar Mandi
+     </a>
+     <a class="hover:underline cursor-pointer" href="#fasilitas">
+      Fasilitas
+     </a>
+    </nav>
+    <button aria-label="Toggle menu" class="md:hidden focus:outline-none focus:ring-2 focus:ring-white" id="menu-btn">
+     <i class="fas fa-bars text-xl">
+     </i>
+    </button>
+   </div>
+   <nav class="hidden bg-blue-700 text-white px-4 py-3 space-y-2 md:hidden" id="mobile-menu">
+    <a class="block hover:underline cursor-pointer" href="#foto-kamar">
+     Foto Kamar
+    </a>
+    <a class="block hover:underline cursor-pointer" href="#foto-kamar-mandi">
+     Foto Kamar Mandi
+    </a>
+    <a class="block hover:underline cursor-pointer" href="#fasilitas">
+     Fasilitas
+    </a>
+   </nav>
+  </header>
+  <main class="container mx-auto px-4 py-8 flex-grow">
+   <section class="mb-12 fade-in" id="foto-kamar">
+    <h2 class="text-3xl font-semibold mb-6 text-center text-blue-700">
+     Foto Kamar
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+     <div class="rounded-lg overflow-hidden shadow-lg bg-white">
+      <img alt="Foto kamar tidur utama dengan tempat tidur rapi, jendela besar dengan tirai putih, dan meja samping tempat tidur dengan lampu baca" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://media-hosting.imagekit.io/7d85c9bb7db04841/WhatsApp%20Image%202025-05-13%20at%2014.56.20%20(1).jpeg?Expires=1841731364&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ttI9mlD~3hwxNRVBwsQmwaeGi-O7w445ftrm6bqqeC7YdRpXhT~x~WZUnUCOK96qYLizG3nuXVerPGQY4mlnvwUz~LRh3bhP8V4iSPINk9nLyJkLuRH4XZkgiuz7l~rtPtNex5RtC8K-AW6uV1FmgrhkW2igi4MUPXx3UnsibshtoIJ5xLfOvYAIK0dZ-6~ujMsu8-DtuBhm9t2hh9nzCg1Zg9TJZgHh3vlpQxfmHLXuEqvg3i3cBQbHIP3sjf5hcrikmXM6H~Rrpk8VRnR-KZyi2ynxKxH8dgFMAouN9XJ~uE~mdr2tOs0sU7T0LC~6z2KUgseKf53wv0LFw1F9Ww__" width="600"/>
+      <div class="p-4">
+       <p class="text-gray-700 font-medium">
+       </p>
+      </div>
+     </div>
+     <div class="rounded-lg overflow-hidden shadow-lg bg-white">
+      <img alt="Foto kamar tidur kedua dengan lemari pakaian kayu, karpet abu-abu, dan meja belajar dengan kursi ergonomis" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://media-hosting.imagekit.io/de2e1d6726df4177/WhatsApp%20Image%202025-05-13%20at%2014.56.20.jpeg?Expires=1841731368&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ehqitokUBZNmqNfc~-it2fWnlnfdjC~-2So14kaAmeyS5z9GZi7GsebU-6aZ6mDFpKoy3nh6sWM8khCi3Jdvl~Xcq2~k7ifq71FIKYXWBM05B~1rLO2GkcVzC1GBzC3xGAZuG8Jacta6Hrmn9HfXy0zUpUr8PTs2jDZQ8NAmQFCr7bMkVa-ivZ5xVWoRWjciSbwWv6wH5-tWBfgNE7RvnI8qjlsN455h3rtPqyROh0crz02QPEV-L~ovxjKEkNsRvvItxVR3qO5ZkNzrenY2LDOf9smPIYHy7PxmpW-pSyHAQ6~DQDKNSnW5mS8IQf-68w4EU37e0m9TGFda-XqN9w__" width="600"/>
+      <div class="p-4">
+       <p class="text-gray-700 font-medium">
+       </p>
+      </div>
+     </div>
+     <div class="rounded-lg overflow-hidden shadow-lg bg-white">
+      <img alt="Foto kamar tidur ketiga dengan tempat tidur single, rak buku, dan jendela kecil dengan tirai biru" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://media-hosting.imagekit.io/a52556d696f740f8/WhatsApp%20Image%202025-05-13%20at%2014.56.21.jpeg?Expires=1841731526&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=OSu2drjtxcSTkjkyGG6WnaAQ3vl7vGjIEiT-g-ombCERgi5DzGOJKfm6hir0EF6Dqv3ylBHPJmC4x7VcgmNHF9wKTtwFjwXAwr9CzyLQElDlpazvPb158VM6b2V1phthN1dJaKCjpWvaKAdhkiglOv9WBHwOjAEy3ARxApuDGsm-w8p7mtcvYhIkWwxs9IhQXjNmJzqCbXAWO1QHRMttbal~0lW55YC0MVLOelivPoje~JXvs1J5Ym9RxfFz0VUHjwq7XQ7dKMCaa8cPvsYLT7a~LSkt5C98k4AiEjqbjM6zVVpvYQ-G4XTELkpMux8kWs7gL3s5I-09idhfUuXIsg__" width="600"/>
+      <div class="p-4">
+       <p class="text-gray-700 font-medium">
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="mb-12 fade-in" id="foto-kamar-mandi">
+    <h2 class="text-3xl font-semibold mb-6 text-center text-blue-700">
+     Foto Kamar Mandi
+    </h2>
+    <div class="max-w-xl mx-auto rounded-lg overflow-hidden shadow-lg bg-white">
+     <img alt="Foto kamar mandi modern dengan wastafel putih, cermin besar, shower kaca, dan lantai keramik abu-abu" class="w-full h-64 object-cover" height="500" loading="lazy" src="https://media-hosting.imagekit.io/f9e4390084ec4336/WhatsApp%20Image%202025-05-13%20at%2015.06.00.jpeg?Expires=1841731779&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=d~dT2vrejKdX7QtjmD3~5a0gR6WNY4ro9rKo4Gr6IUmYXEukOXa3s0Ee9qeHkxg8ffgDzcCwF-Jv9FC1vQGcHTgeiNRt7O2UQJm1noIr5bW0ssrtcXhcc1gBGkZhENm1WWMYCQn0M3Ppn797hXxOPWqFraKX5BgA2f5Skx9s1ruZhz1dEYIcglNFV4GX-1HwNYCnASwm-9s~nS6jaWl8mrg~8uwQ3wOELsxmJiqY4F0xWg2mle1J56piGD~98F8jIRdjj1lJY~GPkuZ9ulZu22~IMHCWo6-xmzZAikTfOiBMbl7jk584p4nz7FGoht4KfE2dl2ZmrtTaIKI7vh78sQ__" width="800"/>
+     <div class="p-4">
+      <p class="text-gray-700 font-medium text-center">
+       Kamar Mandi 
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="mb-12 fade-in" id="fasilitas">
+    <h2 class="text-3xl font-semibold mb-6 text-center text-blue-700">
+     Fasilitas Kamar
+    </h2>
+    <ul class="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+     <li class="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-md">
+      <i class="fas fa-bed text-blue-600 text-2xl flex-shrink-0">
+      </i>
+      <span class="text-gray-800 font-medium">
+       Tempat Tidur Nyaman
+      </span>
+     </li>
+     <li class="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-md">
+      <i class="fas fa-wifi text-blue-600 text-2xl flex-shrink-0">
+      </i>
+      <span class="text-gray-800 font-medium">
+       Wi-Fi Cepat
+      </span>
+     </li>
+     <li class="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-md">
+      <i class="fas fa-fan text-blue-600 text-2xl flex-shrink-0">
+      </i>
+      <span class="text-gray-800 font-medium">
+       Kipas Angin
+      </span>
+     </li>
+     <li class="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-md">
+      <i class="fas fa-closet-wardrobe text-blue-600 text-2xl flex-shrink-0">
+      </i>
+      <span class="text-gray-800 font-medium">
+       Lemari Pakaian
+      </span>
+     </li>
+     <li class="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-md">
+      <i class="fas fa-shower text-blue-600 text-2xl flex-shrink-0">
+      </i>
+      <span class="text-gray-800 font-medium">
+       Kamar Mandi Dalam
+      </span>
+     </li>
+    </ul>
+   </section>
+  </main>
+  <footer class="bg-blue-600 text-white py-6 mt-auto">
+   <div class="container mx-auto px-4 text-center text-sm">
+    © 2025 Info Kamar Saya. Semua hak cipta dilindungi.
+   </div>
+  </footer>
+  <a href="Goga Kost web.html" id="back-button" class="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 transition">
+   <i class="fas fa-arrow-left"></i>
+   <span>Kembali</span>
+  </a>
+  <script>
+   // Toggle mobile menu
+   const menuBtn = document.getElementById('menu-btn');
+   const mobileMenu = document.getElementById('mobile-menu');
+
+   menuBtn.addEventListener('click', () => {
+     mobileMenu.classList.toggle('hidden');
+   });
+
+   // Smooth scroll and active link highlight
+   const navLinks = document.querySelectorAll('nav a');
+   const sections = Array.from(navLinks).map(link => {
+     const id = link.getAttribute('href').substring(1);
+     return document.getElementById(id);
+   });
+
+   function removeActive() {
+     navLinks.forEach(link => link.classList.remove('active'));
+   }
+
+   navLinks.forEach(link => {
+     link.addEventListener('click', e => {
+       e.preventDefault();
+       const targetId = link.getAttribute('href').substring(1);
+       const targetSection = document.getElementById(targetId);
+       if (targetSection) {
+         targetSection.scrollIntoView({behavior: 'smooth', block: 'start'});
+         removeActive();
+         link.classList.add('active');
+         // Close mobile menu on link click
+         if (!mobileMenu.classList.contains('hidden')) {
+           mobileMenu.classList.add('hidden');
+         }
+       }
+     });
+   });
+
+   // Intersection Observer for fade-in animation
+   const faders = document.querySelectorAll('.fade-in');
+   const appearOptions = {
+     threshold: 0.1,
+     rootMargin: "0px 0px -50px 0px"
+   };
+
+   const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+     entries.forEach(entry => {
+       if (!entry.isIntersecting) {
+         return;
+       } else {
+         entry.target.classList.add('visible');
+         appearOnScroll.unobserve(entry.target);
+       }
+     });
+   }, appearOptions);
+
+   faders.forEach(fader => {
+     appearOnScroll.observe(fader);
+   });
+
+   // Highlight nav link on scroll
+   window.addEventListener('scroll', () => {
+     let scrollPos = window.scrollY || window.pageYOffset;
+     let offset = 100; // offset to trigger active state a bit earlier
+     let currentIndex = sections.findIndex(section => {
+       if (!section) return false;
+       return scrollPos + offset >= section.offsetTop && scrollPos + offset < section.offsetTop + section.offsetHeight;
+     });
+     removeActive();
+     if (currentIndex !== -1) {
+       navLinks[currentIndex].classList.add('active');
+     }
+   });
+  </script>
+ </body>
+</html>

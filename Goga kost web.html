@@ -1,0 +1,370 @@
+<html class="scroll-smooth" lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Platform Goga Kost
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+   /* Scroll animation */
+   .fade-in {
+     opacity: 0;
+     transform: translateY(20px);
+     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+   }
+   .fade-in.visible {
+     opacity: 1;
+     transform: translateY(0);
+   }
+   /* Nav link active animation */
+   nav a {
+     position: relative;
+     overflow: hidden;
+   }
+   nav a::after {
+     content: "";
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     width: 0;
+     height: 2px;
+     background-color: #4f46e5; /* indigo-600 */
+     transition: width 0.3s ease, left 0.3s ease;
+   }
+   nav a:hover::after,
+   nav a.active::after {
+     width: 100%;
+     left: 0;
+   }
+  </style>
+ </head>
+ <body class="bg-gray-50 min-h-screen flex flex-col">
+  <header class="bg-white shadow-md sticky top-0 z-50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+    <a class="text-2xl font-semibold text-indigo-600" href="index.html">
+     Goga Kost
+    </a>
+    <nav class="space-x-6 hidden md:flex" id="navbar">
+     <a class="text-gray-700 hover:text-indigo-600 font-medium" href="#listings">
+      Daftar Kamar
+     </a>
+     <a class="text-gray-700 hover:text-indigo-600 font-medium" href="#booking">
+      Pemesanan
+     </a>
+     <a class="text-gray-700 hover:text-indigo-600 font-medium" href="#about">
+      Tentang
+     </a>
+    </nav>
+    <button class="md:hidden text-gray-700 focus:outline-none" id="mobile-menu-button" aria-label="Toggle menu">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+   </div>
+   <div class="md:hidden hidden bg-white border-t border-gray-200" id="mobile-menu">
+    <a class="block px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium" href="#listings">
+     Daftar Kamar
+    </a>
+    <a class="block px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium" href="#booking">
+     Pemesanan
+    </a>
+    <a class="block px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium" href="#about">
+     Tentang
+    </a>
+   </div>
+  </header>
+  <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+   <section class="mb-16 fade-in" id="listings">
+    <h2 class="text-3xl font-semibold text-gray-800 mb-8 text-center">
+     Daftar Kamar Goga Kost
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+     <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+      <img alt="Foto kamar kos pribadi tanpa AC dengan tempat tidur, meja belajar, dan jendela yang cerah" class="w-full h-48 object-cover" height="400" src="https://media-hosting.imagekit.io/c55bd071d2734027/WhatsApp%20Image%202025-05-13%20at%2014.56.21%20(1).jpeg?Expires=1841731277&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Nhvvp9amGPtvFvFLIpndWWnQv8LZ1IM4S4i6OG9-U-r7ykO0EhVD9JGRpOM2fi1up6ENU-QJFDxs7izoONOwMuW-dYH16G4d3~z3TEQinved5LrmJcgnkUM6SpaMTzhy8YMdJf5nFNeXg93gEqV6JyjqPafbX9LhhXMqlZ2xdK0qwT6g4amg8HTcpq1RulmIx3Fb-72bSa68-mjKQ-4ILLqt0K-d~A34Tm-uZUn771nD9A9suj0B~yp05~JInCDVFIdeXM4nELU4fKbsqMffU80T-LfuRr9scLxxTfAfhXd0OXV6GV9KIL7jZ4EzPklzhGb4yOcu0pb8CLSVg4q-bA__" width="600"/>
+      <div class="p-4 flex flex-col flex-grow">
+       <h3 class="text-xl font-semibold text-indigo-600 mb-2">
+        Kamar Tanpa AC
+       </h3>
+       <p class="text-gray-600 flex-grow">
+        Kamar kos pribadi sederhana tanpa AC, dilengkapi tempat tidur, meja belajar, dan ventilasi yang baik.
+       </p>
+       <p class="mt-3 font-semibold text-gray-800">
+        Rp600.000 / bulan
+       </p>
+       <div class="mt-4 flex space-x-3">
+        <button class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded transition booking-btn" data-property="Kamar Tanpa AC">
+         Pesan Sekarang
+        </button>
+        <a class="flex-1 border border-indigo-600 text-indigo-600 hover:bg-indigo-50 font-semibold py-2 rounded text-center transition" href="infokamarkost1.html" role="button" tabindex="0">
+         Info Kamar
+        </a>
+       </div>
+      </div>
+     </article>
+     <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+      <img alt="Foto kamar kos pribadi dengan AC, tempat tidur, meja belajar, dan lampu tidur" class="w-full h-48 object-cover" height="400" src="https://media-hosting.imagekit.io/60b9b7bb15494139/WhatsApp%20Image%202025-05-13%20at%2014.56.18.jpeg?Expires=1841731164&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=gXu6zwVnWLWQ3m2Kak3fD9-vuaT0Z4BsHsF0IGxRPh8F4ITE1w4PoH13PM2F1oqxtt7VgPN~IX~S7m3~cl2BMCkAtOjBgKKVRxG7V0zuHoot0uL-JyLg0qSK9ILj~-2C0Lhv7egmaUMIenU0Myey5TX~4YXy~QotPIK3Kt-hpholz2v-eDgi93IWCTOz2F~RHTEDfWzNA8fcpgmIGFdfSnIKuj2vKjErZP7DVj8DEsNlQ4siCM9AiK0lfgb7DJ8qX9vPEkgw8P-KHxS12snh8Xkj3mFgsxzYP5A2AFhThPv-eOgr0Cxrh0SxNsctMekfgC4WwxkH3ZsdUournO9LJw__" width="600"/>
+      <div class="p-4 flex flex-col flex-grow">
+       <h3 class="text-xl font-semibold text-indigo-600 mb-2">
+        Kamar dengan AC
+       </h3>
+       <p class="text-gray-600 flex-grow">
+        Kamar kos pribadi nyaman dengan AC, tempat tidur, meja belajar, lampu tidur, dan jendela yang bisa dibuka.
+       </p>
+       <p class="mt-3 font-semibold text-gray-800">
+        Rp1.100.000 / bulan
+       </p>
+       <div class="mt-4 flex space-x-3">
+        <button class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded transition booking-btn" data-property="Kamar dengan AC">
+         Pesan Sekarang
+        </button>
+        <a class="flex-1 border border-indigo-600 text-indigo-600 hover:bg-indigo-50 font-semibold py-2 rounded text-center transition" href="infokamarkost2.html" role="button" tabindex="0">
+         Info Kamar
+        </a>
+       </div>
+      </div>
+     </article>
+    </div>
+   </section>
+   <section class="mb-16 fade-in" id="booking">
+    <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center">
+     Form Pemesanan Kamar
+    </h2>
+    <form class="space-y-6" id="booking-form">
+     <div>
+      <label class="block text-gray-700 font-medium mb-1" for="property">
+       Pilih Kamar
+      </label>
+      <select class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" id="property" name="property" required="">
+       <option disabled="" selected="" value="">
+        -- Pilih Kamar --
+       </option>
+       <option value="Kamar Tanpa AC">
+        Kamar Tanpa AC
+       </option>
+       <option value="Kamar dengan AC">
+        Kamar dengan AC
+       </option>
+      </select>
+     </div>
+     <div>
+      <label class="block text-gray-700 font-medium mb-1" for="name">
+       Nama Lengkap
+      </label>
+      <input class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" id="name" name="name" placeholder="Masukkan nama lengkap" required="" type="text"/>
+     </div>
+     <div>
+      <label class="block text-gray-700 font-medium mb-1" for="email">
+       Email
+      </label>
+      <input class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" id="email" name="email" placeholder="Masukkan email" required="" type="email"/>
+     </div>
+     <div>
+      <label class="block text-gray-700 font-medium mb-1" for="phone">
+       Nomor Telepon
+      </label>
+      <input class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" id="phone" name="phone" placeholder="Masukkan nomor telepon" required="" type="tel"/>
+     </div>
+     <div>
+      <label class="block text-gray-700 font-medium mb-1" for="duration-type">
+       Jenis Durasi Sewa
+      </label>
+      <select class="w-full border border-gray-300 rounded-md px-3 py-2 mb-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" id="duration-type" name="duration-type" required="">
+       <option value="bulan" selected="">
+        Bulan
+       </option>
+       <option value="hari">
+        Hari
+       </option>
+      </select>
+      <label class="block text-gray-700 font-medium mb-1" for="duration" id="duration-label">
+       Durasi Sewa (bulan)
+      </label>
+      <input class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" id="duration" max="24" min="1" name="duration" placeholder="Masukkan durasi sewa dalam bulan" required="" type="number"/>
+     </div>
+     <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded transition" type="submit">
+      Pesan Sekarang
+     </button>
+    </form>
+    <div class="mt-6 text-center text-green-600 font-semibold hidden" id="booking-message">
+    </div>
+   </section>
+   <section class="max-w-3xl mx-auto text-center text-gray-700 fade-in" id="about">
+    <h2 class="text-3xl font-semibold text-gray-800 mb-6">
+     Tentang Goga Kost
+    </h2>
+    <p class="mb-4">
+     Goga Kost adalah Kost yang bamenyediakan dua pilihan kamar kos: kamar tanpa AC dan kamar dengan AC. Kami berkomitmen memberikan kenyamanan dan keamanan bagi penghuni kos.
+    </p>
+    <p>
+     Sistem pemesanan yang mudah memungkinkan Anda memesan kamar sesuai kebutuhan dengan cepat dan praktis, baik untuk durasi harian maupun bulanan.
+    </p>
+   </section>
+  </main>
+  <footer class="bg-white border-t border-gray-200 py-6 mt-auto">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+    © 2025 KosPribadi. All rights reserved.
+   </div>
+  </footer>
+  <script>
+   // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on link click and smooth scroll
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({behavior: 'smooth'});
+        }
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Prefill booking form when "Pesan Sekarang" clicked
+    const bookingForm = document.getElementById('booking-form');
+    const propertySelect = document.getElementById('property');
+    const bookingMessage = document.getElementById('booking-message');
+    const durationTypeSelect = document.getElementById('duration-type');
+    const durationInput = document.getElementById('duration');
+    const durationLabel = document.getElementById('duration-label');
+
+    document.querySelectorAll('button.booking-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const property = button.getAttribute('data-property');
+        propertySelect.value = property;
+        propertySelect.focus();
+        window.scrollTo({
+          top: bookingForm.offsetTop - 20,
+          behavior: 'smooth',
+        });
+      });
+    });
+
+    // Update duration label and max based on duration type
+    durationTypeSelect.addEventListener('change', () => {
+      const type = durationTypeSelect.value;
+      durationLabel.textContent = type === 'hari' ? 'Durasi Sewa (hari)' : 'Durasi Sewa (bulan)';
+      if(type === 'hari') {
+        durationInput.max = 365;
+        durationInput.min = 1;
+        durationInput.placeholder = 'Masukkan durasi sewa dalam hari';
+      } else {
+        durationInput.max = 24;
+        durationInput.min = 1;
+        durationInput.placeholder = 'Masukkan durasi sewa dalam bulan';
+      }
+      durationInput.value = '';
+    });
+
+    // Handle booking form submission to open WhatsApp with prefilled message
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(bookingForm);
+      const property = formData.get('property');
+      const name = formData.get('name').trim();
+      const email = formData.get('email').trim();
+      const phone = formData.get('phone').trim();
+      const duration = formData.get('duration');
+      const durationType = formData.get('duration-type');
+
+      if (!property) {
+        alert('Silakan pilih kamar yang ingin dipesan.');
+        return;
+      }
+      if (!name || !email || !phone || !duration) {
+        alert('Mohon lengkapi semua data pemesanan.');
+        return;
+      }
+
+      // Format WhatsApp message
+      const message = `Halo Goga Kost,%0ASaya ingin memesan kamar dengan detail berikut:%0A- Kamar: ${property}%0A- Nama: ${name}%0A- Email: ${email}%0A- Nomor Telepon: ${phone}%0A- Durasi Sewa: ${duration} ${durationType}%0A%0ATerima kasih.`;
+
+      // WhatsApp number (replace with your WhatsApp number in international format without + or 0)
+      const whatsappNumber = "6281273086999";
+
+      // Open WhatsApp chat in new tab
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+      window.open(whatsappURL, '_blank');
+
+      // Optionally reset form after opening WhatsApp
+      bookingForm.reset();
+      propertySelect.value = "";
+      durationLabel.textContent = "Durasi Sewa (bulan)";
+      durationInput.max = 24;
+      durationInput.min = 1;
+      durationInput.placeholder = "Masukkan durasi sewa dalam bulan";
+    });
+
+    // Scroll animation using IntersectionObserver
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.classList.add('visible');
+          appearOnScroll.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+
+    // Navigation smooth scroll with active link animation for desktop nav
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        // Only handle internal links on this page
+        if(link.href.includes(window.location.origin + window.location.pathname)) {
+          e.preventDefault();
+          const targetId = link.getAttribute('href').split('#')[1];
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({behavior: 'smooth'});
+          }
+          // Animate active link
+          navLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // On page load, highlight nav based on scroll position
+    const sections = ['listings', 'booking', 'about'].map(id => document.getElementById(id));
+    window.addEventListener('scroll', () => {
+      let scrollPos = window.scrollY + window.innerHeight / 3;
+      let currentSectionId = '';
+      for (const section of sections) {
+        if (section.offsetTop <= scrollPos) {
+          currentSectionId = section.id;
+        }
+      }
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes('#' + currentSectionId)) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+ </body>
+</html>
